@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Round Robin Scheduling Algorithm with Energy Efficiency(Power saving)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Dark Mode Option-->
+    <div class="dark-mode-toggle">
+        <label class="switch">
+            <input type="checkbox" id="darkModeToggle">
+            <span class="slider round"></span>
+        </label>
+        <p>Dark Mode</p>
+    </div>
+
+    <div class="big-heading">
+        Simulation for Energy Efficient CPU Scheduler Algorithm(Round Robin)
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h1>Round Robin Scheduling with Energy Efficiency Simulation</h1>
+            <p>Manage and optimize CPU scheduling based on energy consumption and time quantum, providing better Efficiency</p>
+        </div>
+
+        <!-- Inputs Section for number of process and checkbox -->
+        <div class="form-container">
+            <label for="numProcesses">Number of Processes:</label>
+            <input type="number" id="numProcesses" placeholder="Enter number of processes" min="1" required>
+
+            <div class="checkbox-container">
+                <label for="useEnergy">Use Energy Efficiency:
+                    <input type="checkbox" id="useEnergy">
+                </label>
+            </div>
+
+            <button id="generateInputsBtn" class="btn">Enter Process Inputs</button>
+
+            <!-- Time Quantum Input (conditional display) -->
+            <div id="timeQuantumInput" class="hidden">
+                <label for="timeQuantum">Time Quantum:</label>
+                <input type="number" id="timeQuantum" placeholder="Enter time quantum" required>
+            </div>
+        </div>
+
+        <!-- Dynamic Process Inputs Section -->
+        <div id="processInputs" class="dynamic-inputs"></div>
+
+        <!-- Simulation Button -->
+        <button id="submitBtn" class="btn">Start Simulation</button>
+
+        <!-- Results Table -->
+        <div class="table-container">
+            <table id="processTable">
+                <thead>
+                    <tr>
+                        <th>Process-ID</th>
+                        <th>Arrival Time(AT)</th>
+                        <th>Burst Time(BT)</th>
+                        <th>Completion Time(CT)</th>
+                        <th>Turnaround Time(TAT)</th>
+                        <th>Waiting Time(WT)</th>
+                        <th>Response Time(RT)</th>
+                        <th>Time Quantum(TQ)</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <!-- Performance Metrics -->
+        <div class="metrics-container">
+            <div id="totalEnergyUsage"></div>
+            <div id="totalCPUTime"></div>
+            <div id="totalExecutionTime"></div>
+            <div id="cpuUtilization"></div>
+        </div>
+
+        <!-- Team Section -->
+        <div class="team-section">
+            <h2>Meet the Team</h2>
+            <div class="team-container">
+                <div class="team-member">
+                    <h3>Prateek Tripathi</h3>
+                </div>
+                <div class="team-member">
+                    <h3>Vikas Kumar Yadav</h3>
+                </div>
+                <div class="team-member">
+                    <h3>Harshit</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

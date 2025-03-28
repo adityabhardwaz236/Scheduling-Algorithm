@@ -1,0 +1,330 @@
+ /* General styles */
+ body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, black, #acb6e5);
+    margin: 0;
+    padding: 20px;
+    transition: background 0.5s ease-in-out;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background: linear-gradient(to right, #1a1a1a, #333);
+    color: white;
+}
+
+body.dark-mode .container {
+    background: rgba(50, 50, 50, 0.9);
+}
+
+body.dark-mode .form-container,
+body.dark-mode .metrics-container,
+body.dark-mode .team-section {
+    background: rgba(60, 60, 60, 0.9);
+}
+
+body.dark-mode table th {
+    background: linear-gradient(to right, black, #444);
+}
+
+body.dark-mode table td {
+    background-color: #222;
+    color: white;
+}
+
+body.dark-mode button.btn {
+    background: linear-gradient(135deg, #0056b3, #003f7f);
+}
+
+body.dark-mode button.btn:hover {
+    background: linear-gradient(135deg, #003f7f, #002a4d);
+}
+
+/* Dark Mode Toggle */
+.dark-mode-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+
+.dark-mode-toggle p {
+    margin-left: 10px;
+    color: white;
+}
+
+/* Toggle Switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 34px;
+    height: 20px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 12px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #007BFF;
+}
+
+input:checked + .slider:before {
+    transform: translateX(14px);
+}
+
+/* Container styles */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Header styling */
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    font-weight: 700;
+    font-size: 28px;
+    color: #333;
+}
+
+.header p {
+    color: #666;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+/* Input section styles */
+.form-container {
+    margin-bottom: 20px;
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #333;
+}
+
+input[type="number"],
+input[type="checkbox"] {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+input[type="checkbox"] {
+    width: auto;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+input[type="number"]:focus {
+    border-color: #007BFF;
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+}
+
+.checkbox-container {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+button.btn {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #007BFF, #0056b3);
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button.btn:hover {
+    background: linear-gradient(135deg, #0056b3, #003f7f);
+    transform: scale(1.02);
+}
+
+/* Hidden elements */
+.hidden {
+    display: none;
+}
+
+/* Dynamic inputs */
+.dynamic-inputs {
+    margin-top: 20px;
+}
+
+.process-input {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.process-input input {
+    width: 48%;
+}
+
+/* Table styles */
+.table-container {
+    margin-top: 30px;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background: linear-gradient(to right, black, #acb6e5);
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+table td {
+    background-color: #f9f9f9;
+    font-weight: 500;
+}
+
+table tr:nth-child(even) td {
+    background-color: #fafafa;
+}
+
+/* Hover effect on rows */
+table tbody tr:hover {
+    background: rgba(0, 123, 255, 0.1);
+    transition: background 0.3s ease-in-out;
+}
+
+/* Metrics container */
+.metrics-container {
+    margin-top: 30px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.metrics-container div {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+/* Big Heading */
+.big-heading {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(to right, #17407e, #7bcefe);
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Team Section */
+.team-section {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #051f45, #0072ff);
+    border-radius: 10px;
+    margin-top: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.team-section h2 {
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.team-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 200px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.team-member h3 {
+    color: #333;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.team-member:hover {
+    transform: scale(1.05);
+}
